@@ -5,30 +5,18 @@ using namespace std;
 int main(){
 
     cout << "Enter a character type: ";
+    char x;
     cin >> x;
 
-    bool isDigit = isDigit(x);
+   if (isdigit(x)) {
+    cout << "It's a digit";
+   } else if (x == '!') {
+        cout << "It's a punctuation";
+   } else if (x == 'a' || x == 'e' || x == 'i' || x == 'o' || x == 'u') {
+        cout << "It's a vowel";
+   } else {
+    cout << "Unrecognised";
+   }
 
-
-    switch (x):
-     case a:
-     case e:
-     case i:
-     case o:
-     case u:
-     cout << x << " is a vowel";
-     break;
-
-     case !:
-     cout << x << " is punctuation";
-     break;
-
-     case isDigit:
-     cout << x << " is a digit";
-     break;
-
-     default:
-     cout << x << " is unrecognised"
-
-    return 0;
+   return 0;
 }
